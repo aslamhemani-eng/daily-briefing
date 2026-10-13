@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Maas Inspiration</title><link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="theme-color" content="#0f766e">
+<style>
+:root{--bg:#f3f5f8;--card:#fff;--ink:#16202c;--mut:#5b6977;--line:#e3e8ee;--acc:#0f766e;--red:#dc2626;--redb:#fef2f2;--amb:#b45309;--ambb:#fffbeb;--blu:#1d4ed8;--blub:#eff6ff;--grn:#047857;--grnb:#ecfdf5;--pur:#7c2d12;--purb:#fff7ed}
+*{box-sizing:border-box}body{margin:0;font:17px/1.5 "Segoe UI",system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px 60px}
+.top{padding-top:max(22px,env(safe-area-inset-top));background:linear-gradient(135deg,#0f766e,#134e4a 60%,#1e3a5f);color:#fff;padding:22px 0 0;position:sticky;top:0;z-index:5;box-shadow:0 4px 18px rgba(0,0,0,.15)}
+.top .wrap{padding-bottom:0}.brand{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:6px}
+.brand h1{margin:0;font-size:1.55rem;letter-spacing:.08em}.brand .meta{opacity:.9;font-size:.95rem;text-align:right}
+nav{display:flex;gap:4px;margin-top:14px;overflow-x:auto}nav button{background:none;border:0;color:#d9f2ee;font:600 .95rem inherit;font-family:inherit;padding:10px 14px;border-bottom:3px solid transparent;cursor:pointer;white-space:nowrap}
+nav button.on{color:#fff;border-color:#5eead4}
+h2.day{font-size:1.35rem;margin:24px 0 4px}.sub{color:var(--mut);margin:0 0 16px;font-size:.95rem}
+.hist{background:var(--ambb);border:1px solid #fcd34d;color:var(--amb);padding:10px 14px;border-radius:10px;margin:12px 0;font-size:.95rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:8px 0 18px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}button.stat{font:inherit;color:inherit;text-align:left;cursor:pointer;border-width:2px;transition:.15s}button.stat:hover{border-color:var(--acc);transform:translateY(-1px)}button.stat.on{border-color:var(--acc);background:#f0fdfa;box-shadow:0 0 0 3px #99f6e4}button.stat span:after{content:" ›";font-weight:700}.focus{border:2px solid var(--acc)}.stat b{font-size:1.6rem;display:block}.stat span{color:var(--mut);font-size:.88rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:0 0 14px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.card>summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:1.08rem}
+.card>summary::-webkit-details-marker{display:none}.card>summary:after{content:"▾";color:var(--mut);transition:.2s}.card:not([open])>summary:after{transform:rotate(-90deg)}
+.card .in{padding:0 18px 16px}.card.glance{border:2px solid var(--acc)}
+.chip{display:inline-block;font:700 .72rem/1 inherit;font-family:inherit;letter-spacing:.05em;padding:5px 8px;border-radius:6px;margin-right:8px;vertical-align:2px;white-space:nowrap}
+.URGENT{background:var(--redb);color:var(--red)}.OVERDUE{background:var(--red);color:#fff}.TODAY{background:var(--blub);color:var(--blu)}.WAITING{background:var(--ambb);color:var(--amb)}.COMPLETED{background:var(--grnb);color:var(--grn)}.WEEK,.THIS{background:var(--purb);color:var(--pur)}
+ul.clean{list-style:none;margin:0;padding:0}ul.clean li{padding:9px 0;border-top:1px solid var(--line)}ul.clean li:first-child{border-top:0}
+table{width:100%;border-collapse:collapse;font-size:.95rem}th{text-align:left;color:var(--mut);font-weight:600;font-size:.82rem;text-transform:uppercase;letter-spacing:.04em;padding:8px 6px;border-bottom:2px solid var(--line)}td{padding:10px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);margin:18px 0 6px}
+.task{display:flex;gap:12px;padding:10px 0;border-top:1px solid var(--line);align-items:flex-start}.task input{width:22px;height:22px;margin-top:3px;accent-color:var(--acc);flex:none}
+.task.done .tt{text-decoration:line-through;color:var(--mut)}.tt{font-weight:600}.tm{color:var(--mut);font-size:.88rem}
+.carry{font-size:.75rem;color:var(--acc);font-weight:700}
+.dbtn{flex:none;min-width:96px;padding:9px 10px;border-radius:10px;border:2px solid var(--line);background:#fff;font:700 .85rem inherit;font-family:inherit;color:var(--mut);cursor:pointer}.dbtn:hover{border-color:var(--grn);color:var(--grn)}.dbtn.on{background:var(--grn);border-color:var(--grn);color:#fff}
+.tact{margin-top:6px;display:flex;gap:6px;flex-wrap:wrap}.btn.warn{color:var(--red);border-color:var(--red)}.rep{margin-top:8px}.rep textarea{min-height:70px}.myrep{margin-top:6px;background:var(--blub);color:var(--blu);border-radius:8px;padding:6px 10px;font-size:.9rem;white-space:pre-wrap}.task>div{flex:1}
+.proj{border:1px solid var(--line);border-radius:10px;margin:8px 0}.proj>summary{padding:12px 14px;cursor:pointer;font-weight:600}.proj .pi{padding:0 14px 12px;font-size:.95rem}
+.pi dt{font-weight:700;color:var(--mut);font-size:.8rem;text-transform:uppercase;margin-top:8px}.pi dd{margin:2px 0 0}
+.btn{background:var(--acc);color:#fff;border:0;border-radius:8px;padding:8px 12px;font:600 .88rem inherit;font-family:inherit;cursor:pointer}.btn.ghost{background:none;color:var(--acc);border:1px solid var(--acc)}.btn.sm{padding:4px 8px;font-size:.78rem}
+.em{padding:10px 0;border-top:1px solid var(--line)}.em summary{cursor:pointer}.em .d{color:var(--mut);font-size:.92rem;margin:6px 0 0 4px}
+textarea{width:100%;min-height:90px;border:1px solid var(--line);border-radius:10px;padding:10px;font:inherit;font-size:.95rem;resize:vertical}
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}.notes label{font-weight:700;font-size:.9rem;display:block;margin-bottom:4px}
+pre.md{white-space:pre-wrap;font:inherit;font-size:.93rem;margin:0}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}.cal div{background:var(--card);border:1px solid var(--line);border-radius:8px;min-height:62px;padding:6px;font-size:.9rem}.cal .h{background:none;border:0;min-height:0;text-align:center;color:var(--mut);font-weight:700;font-size:.8rem}
+.cal .has{border-color:var(--acc);cursor:pointer;background:#f0fdfa}.cal .has small{display:block;color:var(--acc);font-weight:600}.cal .sel{outline:3px solid var(--acc)}
+.search input{width:100%;font:inherit;padding:14px;border-radius:12px;border:1px solid var(--line);font-size:1.05rem}.hit{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;margin:8px 0;cursor:pointer}.hit mark{background:#fde68a}
+#lock{max-width:380px;margin:18vh auto;text-align:center}#lock input{width:100%;padding:14px;font-size:1.1rem;border-radius:10px;border:1px solid var(--line);margin:14px 0}
+.empty{color:var(--mut);font-style:italic}
+.syncst{font-size:.78rem;opacity:.8}
+.pad{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin:14px 0 20px}
+.pad a{display:flex;flex-direction:column;gap:6px;min-height:118px;padding:14px;border-radius:18px;background:var(--card);border:2px solid var(--line);color:var(--ink);text-decoration:none;box-shadow:0 2px 6px rgba(0,0,0,.06);transition:.12s}
+.pad a:hover{border-color:var(--acc)}.pad a:active{transform:scale(.97);background:#f0fdfa}
+.pad .r1{display:flex;justify-content:space-between;align-items:center}.pad .no{width:34px;height:34px;border-radius:50%;background:var(--acc);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
+.pad .ic{font-size:1.8rem;line-height:1}.pad .lb{font-weight:700;font-size:1.02rem;line-height:1.25;flex:1}
+.pad .ct{align-self:flex-start;font-weight:800;font-size:.9rem;padding:4px 10px;border-radius:999px;background:var(--grnb);color:var(--grn)}.pad .ct.red{background:var(--redb);color:var(--red)}.pad .ct.zero{background:#f1f5f9;color:var(--mut)}
+.secbar{display:flex;gap:10px;margin:14px 0}.secbar a{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;min-height:58px;padding:10px;border-radius:14px;font-weight:700;font-size:1.02rem;text-decoration:none;background:var(--card);color:var(--acc);border:2px solid var(--acc)}.secbar a.all{background:var(--acc);color:#fff}
+.sectitle{font-size:.9rem;color:var(--mut);text-align:center;margin:-4px 0 10px}
+.fab{position:fixed;right:16px;bottom:max(18px,env(safe-area-inset-bottom));z-index:6;background:var(--acc);color:#fff;border:0;border-radius:999px;padding:15px 20px;font:700 1rem inherit;font-family:inherit;box-shadow:0 6px 18px rgba(0,0,0,.28);cursor:pointer}
+body{padding-bottom:80px}nav button{padding:12px 16px;font-size:1rem}.btn{padding:11px 16px;font-size:.95rem;border-radius:10px}.btn.sm{padding:9px 13px;font-size:.88rem}.dbtn{min-height:46px;min-width:110px;font-size:.95rem}.card>summary{padding:18px 20px;font-size:1.15rem}
+@media(max-width:640px){.pad{grid-template-columns:1fr 1fr;gap:10px}.pad a{min-height:110px}.secbar a{font-size:.95rem}}
+@media(max-width:640px){body{font-size:16px}.brand h1{font-size:1.25rem}.brand .meta{text-align:left}table.resp thead{display:none}table.resp tr{display:block;border-bottom:1px solid var(--line);padding:6px 0}table.resp td{display:block;border:0;padding:2px 0}table.resp td:before{content:attr(data-l)": ";color:var(--mut);font-size:.8rem}}
+@media print{.top{position:static}nav{display:none}}
+
+.tab{display:none}.tab.on{display:block}body{padding-bottom:40px}
+</style></head><body>
+<div class="top"><div class="wrap"><div class="brand"><h1>MAAS INSPIRATION</h1><div class="meta"><div><a href="index.html#apps" style="color:#fff">← Operational Apps</a></div><div>Starter mockup · placeholder data</div></div></div>
+<nav id="nav"><button data-v="food" class="on">FOOD</button><button data-v="volunteer">VOLUNTEER</button><button data-v="scheduling">SCHEDULING</button><button data-v="delivery">DELIVERY</button></nav></div></div>
+<div class="wrap">
+<div class="hist">Mockup only. All names, numbers and dates below are example placeholders. No real data is connected yet.</div>
+
+<section class="tab on" id="food"><h2 class="day">Food</h2><p class="sub">What food is planned to be served. Will be sourced later from the Google Drive “Maas Inspiration” folder.</p>
+<div class="grid"><div class="stat"><b>3</b><span>Meals planned (example)</span></div><div class="stat"><b>120</b><span>Servings (example)</span></div><div class="stat"><b>Sat</b><span>Next service (example)</span></div></div>
+<div class="card"><div class="in" style="padding-top:16px"><table class="resp"><thead><tr><th>Date</th><th>Meal</th><th>Menu</th><th>Servings</th><th>Status</th></tr></thead><tbody>
+<tr><td data-l="Date">Sat (example)</td><td data-l="Meal">Lunch</td><td data-l="Menu">Rice, lentil curry, salad</td><td data-l="Servings">60</td><td data-l="Status"><span class="chip COMPLETED">CONFIRMED</span></td></tr>
+<tr><td data-l="Date">Sat (example)</td><td data-l="Meal">Dinner</td><td data-l="Menu">Vegetable pasta, bread</td><td data-l="Servings">40</td><td data-l="Status"><span class="chip WAITING">PENDING</span></td></tr>
+<tr><td data-l="Date">Sun (example)</td><td data-l="Meal">Breakfast</td><td data-l="Menu">Oatmeal, fruit, juice</td><td data-l="Servings">20</td><td data-l="Status"><span class="chip TODAY">DRAFT</span></td></tr>
+</tbody></table><p class="tm">Source: Google Drive › Maas Inspiration (not connected yet)</p></div></div></section>
+
+<section class="tab" id="volunteer"><h2 class="day">Volunteer</h2><p class="sub">Volunteer management.</p>
+<div class="grid"><div class="stat"><b>12</b><span>Active volunteers (example)</span></div><div class="stat"><b>2</b><span>Open roles (example)</span></div></div>
+<div class="card"><div class="in" style="padding-top:16px"><table class="resp"><thead><tr><th>Name</th><th>Role</th><th>Contact</th><th>Status</th></tr></thead><tbody>
+<tr><td data-l="Name">Volunteer A</td><td data-l="Role">Kitchen prep</td><td data-l="Contact">(555) 000-0001</td><td data-l="Status"><span class="chip COMPLETED">ACTIVE</span></td></tr>
+<tr><td data-l="Name">Volunteer B</td><td data-l="Role">Driver</td><td data-l="Contact">(555) 000-0002</td><td data-l="Status"><span class="chip COMPLETED">ACTIVE</span></td></tr>
+<tr><td data-l="Name">Volunteer C</td><td data-l="Role">Serving</td><td data-l="Contact">(555) 000-0003</td><td data-l="Status"><span class="chip WAITING">ONBOARDING</span></td></tr>
+</tbody></table><p><button class="btn" disabled>+ Add volunteer (mockup)</button></p></div></div></section>
+
+<section class="tab" id="scheduling"><h2 class="day">Scheduling</h2><p class="sub">Shifts and assignments.</p>
+<div class="card"><div class="in" style="padding-top:16px"><table class="resp"><thead><tr><th>Day</th><th>Shift</th><th>Task</th><th>Assigned</th><th>Status</th></tr></thead><tbody>
+<tr><td data-l="Day">Sat (example)</td><td data-l="Shift">8:00–11:00 AM</td><td data-l="Task">Kitchen prep</td><td data-l="Assigned">Volunteer A</td><td data-l="Status"><span class="chip COMPLETED">FILLED</span></td></tr>
+<tr><td data-l="Day">Sat (example)</td><td data-l="Shift">11:00 AM–2:00 PM</td><td data-l="Task">Serving</td><td data-l="Assigned">Volunteer C</td><td data-l="Status"><span class="chip COMPLETED">FILLED</span></td></tr>
+<tr><td data-l="Day">Sat (example)</td><td data-l="Shift">2:00–4:00 PM</td><td data-l="Task">Delivery run</td><td data-l="Assigned">—</td><td data-l="Status"><span class="chip URGENT">OPEN</span></td></tr>
+</tbody></table></div></div></section>
+
+<section class="tab" id="delivery"><h2 class="day">Delivery</h2><p class="sub">Delivery tracking.</p>
+<div class="grid"><div class="stat"><b>5</b><span>Deliveries today (example)</span></div><div class="stat"><b>2</b><span>Delivered (example)</span></div><div class="stat"><b>3</b><span>In progress (example)</span></div></div>
+<div class="card"><div class="in" style="padding-top:16px"><table class="resp"><thead><tr><th>#</th><th>Destination</th><th>Driver</th><th>Meals</th><th>Status</th></tr></thead><tbody>
+<tr><td data-l="#">D-001</td><td data-l="Destination">Location 1 (example)</td><td data-l="Driver">Volunteer B</td><td data-l="Meals">25</td><td data-l="Status"><span class="chip COMPLETED">DELIVERED</span></td></tr>
+<tr><td data-l="#">D-002</td><td data-l="Destination">Location 2 (example)</td><td data-l="Driver">Volunteer B</td><td data-l="Meals">15</td><td data-l="Status"><span class="chip TODAY">OUT FOR DELIVERY</span></td></tr>
+<tr><td data-l="#">D-003</td><td data-l="Destination">Location 3 (example)</td><td data-l="Driver">—</td><td data-l="Meals">20</td><td data-l="Status"><span class="chip WAITING">NOT STARTED</span></td></tr>
+</tbody></table></div></div></section>
+</div>
+<script>
+function show(v){document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.id===v));document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===v))}
+document.querySelectorAll('#nav button').forEach(b=>b.onclick=()=>{location.hash=b.dataset.v});
+window.onhashchange=()=>show(location.hash.slice(1)||'food');show(location.hash.slice(1)||'food');
+</script></body></html>
